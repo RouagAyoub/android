@@ -38,10 +38,27 @@ class Inscri extends StatelessWidget{
     padding: EdgeInsets.all(16.0),
     child: TextFormField(
   decoration: InputDecoration(
-    labelText: 'Enter your username'
+    labelText: 'Enter your password',
   ),
+  obscureText: true,
     ),
   ),
+  FlatButton(
+  color: Colors.deepPurple,
+  textColor: Colors.white,
+  disabledColor: Colors.grey,
+  disabledTextColor: Colors.black,
+  padding: EdgeInsets.all(8.0),
+  splashColor: Colors.deepOrange,
+  
+  onPressed: () {
+    /*...*/
+  },
+  child: Text(
+    "LOGIN",
+    style: TextStyle(fontSize: 20.0),
+  ),
+)
   ],
 )
     )
