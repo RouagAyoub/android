@@ -1,26 +1,15 @@
-import 'package:firebase_database/firebase_database.dart';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Inscription extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return MaterialApp(
-      title: 'inscrivier vous',
-      home: Inscri()
-    );
-    
-    
-  }
 
+class SignIn extends StatefulWidget {
+  @override
+  _SignInState createState() => _SignInState();
 }
-class Inscri extends StatelessWidget{
+
+class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return new Scaffold(
+    return Scaffold(
       body :Center(
       child :Column(
   crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,30 +42,16 @@ class Inscri extends StatelessWidget{
   textColor: Colors.white,
   disabledColor: Colors.grey,
   disabledTextColor: Colors.black,
-      onPressed: (){
+      onPressed: () async{
       
     }, 
     child: Text("SIGN IN")
     ),
   ),
-  Center(
-    child: FlatButton(
-      onPressed: (){},
-      child: new Text('SIGN UP',
-      style:new TextStyle(
-         color: Colors.amber,
-       )
-      )
-      ),
-  ),
-
-
-
 
   ],
 )
     )
     );
   }
-
 }

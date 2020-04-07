@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "942861629820",
+    "firebase_url": "https://soufyanflutter.firebaseio.com",
+    "project_id": "soufyanflutter",
+    "storage_bucket": "soufyanflutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:942861629820:android:180948f5e86af198e0ccf9",
+        "android_client_info": {
+          "package_name": "com.example.task1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "942861629820-get95j7l3lk303ml2du8uvqrc1i49t71.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQgZUOyq5j7k4SXjt4EReb_gnHCXFqHEE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "942861629820-get95j7l3lk303ml2du8uvqrc1i49t71.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
