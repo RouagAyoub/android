@@ -3,6 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:task1/Inscription.dart';
+import 'package:task1/authenticate/authenticate.dart';
 
 class  Soufyan extends StatelessWidget {
 
@@ -10,7 +11,7 @@ class  Soufyan extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp (
       title: 'ahkem blsatek',
-      home: HomePage(),
+      home: Authenticate(),
     );
   }
 }

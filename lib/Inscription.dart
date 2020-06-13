@@ -1,82 +1,114 @@
-import 'package:firebase_database/firebase_database.dart';
+
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Inscription extends StatelessWidget{
+class Inscription extends StatefulWidget{
   @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return MaterialApp(
-      title: 'inscrivier vous',
-      home: Inscri()
-    );
-    
-    
+  State<StatefulWidget> createState() {
+    return new Inscript();
   }
-
+  
 }
-class Inscri extends StatelessWidget{
+
+class Inscript extends State<Inscription>{
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return new Scaffold(
-      body :Center(
-      child :Column(
-  crossAxisAlignment: CrossAxisAlignment.start,
-  mainAxisSize: MainAxisSize.min,
-  children: <Widget>[
-     Padding(
-    padding: EdgeInsets.all(16.0),
-    child: TextFormField(
-  decoration: InputDecoration(
-    labelText: 'Enter your username'
-  ),
-    ),
-  ),
-   
-   Padding(
-    padding: EdgeInsets.all(16.0),
-    child: TextFormField(
-  decoration: InputDecoration(
-    labelText: 'Enter your password',
-  ),
-  obscureText: true,
-    ),
-  ),
-  
-  
-  Center(
-  child: FlatButton(
-  color: Colors.deepPurple,
-  padding: EdgeInsets.fromLTRB(50, 5, 50, 5),
-  textColor: Colors.white,
-  disabledColor: Colors.grey,
-  disabledTextColor: Colors.black,
-      onPressed: (){
-      
-    }, 
-    child: Text("SIGN IN")
-    ),
-  ),
-  Center(
-    child: FlatButton(
-      onPressed: (){},
-      child: new Text('SIGN UP',
-      style:new TextStyle(
-         color: Colors.amber,
-       )
-      )
+    return Scaffold(
+      resizeToAvoidBottomPadding: false,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Container(
+            padding: EdgeInsets.fromLTRB(10, 100, 0, 0),
+            child: Column(
+              children: <Widget>[
+                TextField(
+                  decoration: InputDecoration(
+                    labelText: 'EMAIL',
+                    labelStyle: TextStyle(
+                      fontFamily: 'Montserrat',
+                      fontWeight: FontWeight.bold
+                    )
+                  ),
+
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                    labelText: 'PASSWORD',
+                    labelStyle: TextStyle(
+                      fontFamily: ''
+                    )
+                  ),
+                  obscureText: true,
+                )
+
+              ],
+            ),
+          )
+        ],
+        
       ),
-  ),
-
-
-
-
-  ],
-)
-    )
     );
   }
 
 }
+
+/*
+class Insc extends State<Inscription>{
+   int _selectedIndex = 0;
+  static const TextStyle optionStyle =
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  static const List<Widget> _widgetOptions = <Widget>[
+    Text(
+      'Index 0: Home',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 1: Business',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 2: School',
+      style: optionStyle,
+    ),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('BottomNavigationBar Sample'),
+      ),
+      body: Center(
+        child: _widgetOptions.elementAt(_selectedIndex),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            title: Text('Home'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.business),
+            title: Text('Business'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            title: Text('School'),
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.amber[800],
+        onTap: _onItemTapped,
+      ),
+    );
+  }
+}
+*/
